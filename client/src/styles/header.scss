@@ -7,7 +7,7 @@ $white: #ffffff;
   &__top {
     @include flex-row;
     @include justify-between;
-
+    width: 100%;
     padding: 1rem;
 
     &--left {
@@ -73,12 +73,13 @@ $white: #ffffff;
   @include flex-row;
   @include justify-between;
   @include align-center;
+  width: 100%;
 
   &__form {
     @include flex-col;
     @include align-center;
 
-    width: 20rem;
+    width: 100%;
   }
 
   &__form-header {

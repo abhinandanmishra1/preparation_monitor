@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "rsuite/dist/rsuite.css";
+
+.rs-picker-toolbar-right .rs-btn {
+  background: blue;
+}

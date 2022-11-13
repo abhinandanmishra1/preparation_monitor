@@ -11,17 +11,17 @@ const Gym = () => {
     getAllGyms();
   }, []);
   return (
-    <>
+    <div className='w-3/5'>
     {
-      gyms && (
-        gyms.map((gym) => (
-          <div key={gym.id}>
-            <h2>{gym.title}</h2>
-          </div>
-        ))
-      )
+      // gyms && (
+      //   gyms.map((gym) => (
+      //     <div key={gym.id}>
+      //       <h2>{gym.title}</h2>
+      //     </div>
+      //   ))
+      // )
     }
-    </>
+    </div>
   )
 }
 

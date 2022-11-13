@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../Header';
 import Gym from '../Gym';
+import CreateGymForm from '../Gym/CreateGymForm';
 
 const Home = () => {
   return (
-    <div>
+    <div className='w-full'>
       <Header />
-      <Gym />
+      <div className='w-full flex'>
+        <Gym />
+        <CreateGymForm />
+      </div>
     </div>
   )
 }
