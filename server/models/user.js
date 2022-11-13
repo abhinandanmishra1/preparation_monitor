@@ -1,22 +1,27 @@
 const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
-    _id:{
-        type: String,
-        required: true,
-    },
     user_name: {
         type: String,
         required: true,
     },
-    present_gym: [String],
-    past_gym: [String],
-    lastUpdated:{
-        type: Date,
-        default: Date.now,
-    },
+    gyms: [{ 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Gym',
+    }],
     leetcode_username: String,
     codeforces_username: String,
 })
 
-exports.User = mongoose.model("User",userSchema)
+const UserModel = mongoose.model("User", userSchema)
+
+module.exports = UserModel;
+
+/* dummyData
+{
+    "user_name": "user1",
+    "gyms": ["636f7f1f97c6facfaaaf41b5"],
+    "leetcode_username": "user1",
+    "codeforces_username": "user1"
+}
+*/

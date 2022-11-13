@@ -1,0 +1,118 @@
+$navbar-border-color: #e7e7e7;
+$primary-color: #849899;
+$white: #ffffff;
+
+.header {
+  width: 100%;
+  &__top {
+    @include flex-row;
+    @include justify-between;
+
+    padding: 1rem;
+
+    &--left {
+      @include flex-row;
+      @include align-center;
+      @include justify-between;
+
+      width: 10rem;
+    }
+
+  }
+
+  &__navbar {
+    @include flex-row;
+    @include justify-between;
+    
+    margin: 1rem;
+    width: 70%;
+    padding: 1rem;
+    border: 2px solid $navbar-border-color;
+  }
+
+  &__navbar-items{
+    @include flex-row;
+    @include justify-between;
+
+    width: 65%;
+    padding: 1rem;
+  }
+
+  &__navbar-item {
+    cursor: pointer;
+    border-bottom: 0.1rem solid $white;
+    
+    &:hover {
+      color: $primary-color;
+      border-bottom: 0.1rem solid $navbar-border-color;
+    }
+  }
+  &__search {
+    @include flex-row;
+    @include align-center;
+    width: 30%;
+  }
+
+  &__search-input{
+    width: 75%;
+    padding: 0.5rem;
+    outline: none;
+    border: 0;
+    border-bottom: 0.1rem solid $navbar-border-color;
+    color: $primary-color;
+  }
+
+  &__search-icon{
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.login,.register {
+  @include flex-row;
+  @include justify-between;
+  @include align-center;
+
+  &__form {
+    @include flex-col;
+    @include align-center;
+
+    width: 20rem;
+  }
+
+  &__form-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary-color;
+  }
+
+  &__form-body {
+    @include flex-col;
+    @include justify-between;
+    @include align-center;
+
+    width: 100%;
+    padding: 1rem;
+  }
+
+  &__form-body-row {
+    @include flex-row;
+    @include justify-between;
+    @include align-center;
+
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  &__form-btn {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: $primary-color;
+    color: $white;
+    cursor: pointer;
+  }
+}
